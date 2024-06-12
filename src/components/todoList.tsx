@@ -122,7 +122,7 @@ const TodoList = () => {
     <>
       <TaskForm />
       <hr />
-      <Flex gap="middle">
+      <Flex>
         <Menu
           onClick={handleFilter}
           style={{ width: 256, marginTop: '2rem', fontSize: '1rem' }}
@@ -131,6 +131,7 @@ const TodoList = () => {
           items={menuItems}
         />
         <Table
+          style={{ width: '100%' }}
           columns={columns}
           dataSource={getData()}
           title={() => <h1>Header</h1>}
